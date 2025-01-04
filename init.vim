@@ -39,7 +39,7 @@ lua << EOF
 --require('go_run')
 require'lspconfig'.rust_analyzer.setup({})
 require'lspconfig'.emmet_ls.setup{}
-require'lspconfig'.sumneko_lua.setup{}
+require'lspconfig'.lua_ls.setup{}
 require('auto-save')
 require'lspconfig'.pylsp.setup{}
 require'lspconfig'.vimls.setup{}
@@ -58,7 +58,7 @@ require'lspconfig'.phpactor.setup{}
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.eslint.setup{}
 require'lspconfig'.bashls.setup{}
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.ts_ls.setup{}
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.kotlin_language_server.setup{}
 require('lualine').setup{}
@@ -86,7 +86,7 @@ set smarttab
 syntax on
 " Use space characters instead of tabs.
 set expandtab
-colorscheme onedarkpro
+colorscheme onedark_dark
 set background=dark
 
 " Do not save backup files.
@@ -275,7 +275,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 -- Replace <YOUR_LSP_SERVER> with
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'sumneko_lua', 'phpactor', 'solc', 'vimls', 'pylsp', 'rust_analyzer', 'solidity_ls', 'tsserver', 'clangd', 'bashls', 'cssls', 'html', 'gopls', 'tailwindcss', 'jsonls', 'yamlls' }
+local servers = { 'lua_ls', 'phpactor', 'solc', 'vimls', 'pylsp', 'rust_analyzer', 'solidity_ls', 'ts_ls', 'clangd', 'bashls', 'cssls', 'html', 'gopls', 'tailwindcss', 'jsonls', 'yamlls' }
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {

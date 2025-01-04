@@ -192,7 +192,7 @@ ins_left {
     end
     return msg
   end,
-  icon = '  MLSP:',
+  icon = '  LSP:',
   color = { fg = '#ffffff', gui = 'bold' },
 }
 
